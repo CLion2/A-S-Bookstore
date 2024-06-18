@@ -1,0 +1,40 @@
+{{! Use the main layout }}
+{{!< main }}
+
+<section class="book-list">
+{{#if coverImages}}
+    {{#each coverImages}}
+        <div class="book-cover">
+            <img src="{{this}}" alt="Book Cover">
+        </div>
+    {{/each}}
+{{else}}
+    <p>No book covers available.</p>
+{{/if}}
+{{#if posts.length}}
+    {{#each posts}}
+
+        <div class="book-review">          
+            <h3 id="this-title">{{this.title}}</h3>
+            
+            <h4 id="this-content">{{this.content}}</h4>
+                    
+        </div>                
+    {{/each}}
+    
+{{/if}}
+</section>
+
+<script>
+    {{!-- function definitions here --}}
+    function changeBackground() {
+        document.body.style.backgroundImage = 'none';
+        document.documentElement.style.backgroundImage = 'none';
+        document.documentElement.style.backgroundColor = 'moccasin';
+        const messageElement = document.querySelector('.message');
+        messageElement.innerHTML = 'Here are some great books to read!';
+    }
+
+    {{!-- function calls --}}
+    changeBackground();
+</script>

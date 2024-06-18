@@ -1,0 +1,22 @@
+{{! Use the main layout }}
+{{!< main }}
+
+<section class="login-register">
+    <section class = "register-area">
+        <h2>You have been logged out! Redirecting to Home...</h2>
+        <!-- errors will appear here -->
+        {{#if regError}}
+            <p style="color: red;">{{regError}}</p>
+        {{/if}}
+    </section>
+</section>
+
+<script>
+    function redirectToHome() {
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 1500); // 1.5 seconds
+    }
+
+    redirectToHome();
+</script>

@@ -1,0 +1,86 @@
+{{! Partial for a single post }}
+<div class="post">
+
+    {{!-- add book cover here --}}
+    {{!-- <div class="book-image">
+        <img src="{{#if image}}
+                        {{image}}
+                    {{else}}
+                        /posts/books/{{this.title}}
+                    {{/if}}" 
+            alt="book-cover">
+    </div> --}}
+
+    <div class="post-content preserve-newlines">
+        <!-- the post -->
+        <div class="review-header">
+            <!-- the user's avatar -->
+            <div class="post-avatar">
+                <img src="/avatar/{{this.username}}" 
+                    alt="User Avatar" 
+                    class="header-avatar">
+            </div>
+            <h3 id="this-title">{{this.title}}</h3>
+            {{#if coverImageUrl}}
+                <img src="{{coverImageUrl}}" alt="Cover image for {{title}}">
+            {{/if}}
+        </div>
+        <h4 id="this-content">{{this.content}}</h4>
+        {{!-- {{this.user.username}} --}}
+        <div class="post-status-bar">
+            <!-- everything that is shown in the status bar -->
+            <!-- Heart = ♥ -->
+            <a class="like-button" onclick="handleLikeClick(event)" data-id="{{this.id}}" >♥</a>
+            <h4>{{this.likes}}</h4>
+            <!-- font awesome  trashcan = <i class="fas fa-trash-alt"> </i>-->
+            <a class="delete-button" onclick="handleDeleteClick(event)" data-id="{{this.id}}" ><i class="fas fa-trash-alt"> </i></a>
+        </div>        
+    </div>
+</div>
+<script>
+
+    function handleLikeClick(event) {
+        console.log(event.target);
+        const postId = event.target.getAttribute('data-id');
+
+        // you might want to "fetch" something... 
+        fetch(`/like/${postId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `dataId=${encodeURIComponent(postId)}`
+        })
+        .then(response =>{ 
+            if(response.status == 200){
+                window.location.reload();
+            }
+            console.log(response); 
+        })
+        .catch(error => console.error('Error:', error));   
+        console.log("liked!");        
+    }
+
+    function handleDeleteClick(event) {
+        const buttonElement = event.target.closest('.delete-button');
+        const postId = buttonElement.getAttribute('data-id');        
+
+        // you might want to "fetch" something... 
+        fetch(`/delete/${postId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `dataId=${encodeURIComponent(postId)}`
+        })
+        .then(response =>{ 
+            if(response.status == 200){
+                window.location.reload();
+            }
+            console.log(response); 
+        })
+        .catch(error => console.error('Error:', error));
+        console.log("deleted!");        
+        
+    }    
+</script>
