@@ -43,6 +43,14 @@ Soma Matsumoto [![GitHub Badge](https://img.shields.io/badge/GitHub-Profile-blac
 
 All images used in this project are from Adobe Stock royalty-free images.
 
+## Image Credits
+
+The book cover images used in this project are sourced from the Google Books API.
+
+## Legal Notice
+
+The book cover images displayed in this project are provided by the Google Books API. All rights to the book cover images are owned by their respective copyright holders. The images are used under the terms specified by the Google Books API.
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
