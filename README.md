@@ -21,7 +21,7 @@ A&S Bookstore is a platform where book lovers can come together and share their 
   <img src="README_Images/Home.png" alt="Home Page" width="650" height="350">
   <img src="README_Images/OAuth.png" alt="Login Page" width="650" height="350">
   <img src="README_Images/Post.png" alt="Post Page" width="650" height="350">
-  <img src="README_Images/Posts.png" alt="Posts Page" width="650" height="350">
+  <img src="README_Images/Posts.png" alt="Posts Page" width="650" height="300">
   <img src="README_Images/Profile.png" alt="Profile Page" width="650" height="350">
 </p>
 
