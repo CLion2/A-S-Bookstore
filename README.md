@@ -41,10 +41,7 @@ Soma Matsumoto [![GitHub Badge](https://img.shields.io/badge/GitHub-Profile-blac
 
 ## Credits
 
-All images used in this project are from Adobe Stock royalty-free images.
-
-## Image Credits
-
+All background images used in this project are from Adobe Stock royalty-free images.
 The book cover images used in this project are sourced from the Google Books API.
 
 ## Legal Notice
