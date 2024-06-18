@@ -7,7 +7,6 @@ Welcome to the public version of A&S Bookstore! This website allows users to sha
 A&S Bookstore is a platform where book lovers can come together and share their favorite reads. With a simple and intuitive interface, users can:
 - Post reviews of their favorite books
 - Browse books recommended by others
-- Connect with like-minded readers
 
 ## Features
 
