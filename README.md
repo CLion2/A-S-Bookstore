@@ -1,6 +1,5 @@
 # A&S Bookstore - Share Your Favorite Books!
-
-Welcome to the public version of A&S Bookstore! This website allows users to share the books they have enjoyed. It is designed to run on localhost and uses Google OAuth for authentication.
+This is a public version of our project for ECS 162. It is designed to run on localhost.
 
 ## Description
 
